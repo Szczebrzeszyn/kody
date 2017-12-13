@@ -20,12 +20,18 @@ def euklides2(a, b):
 
     return b
 
+def euklides_rek(a, b):
+    if b == 0:
+        return a 
+    return euklides_rek(b, a % b )
+
 def main(args):
 
     a = int(input("podaj liczbe:"))
     b = int(input("podaj liczbe:"))
     assert euklides2(10, 5) == 5
-    print("nwd {:d} ,{:d} = {:d}".format(a, b, euklides(a, b)))
+    assert euklides_rek(10, 5) == 5 
+    print("nwd {:d} ,{:d} = {:d}".format(a, b, euklides_rek(a, b)))
 
     return 0
 

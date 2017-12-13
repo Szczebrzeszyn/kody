@@ -26,7 +26,5 @@ int main()
     cin >> s;
  
     cout << "silnia: "<< silnia_rek(s) << endl;
- 
-    system("PAUSE");
-    return(0);
+    return 0;
 }

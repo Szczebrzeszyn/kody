@@ -10,7 +10,10 @@ def horner_it(stopien, tb, x):
 	
 	return wynik
 
-
+def horner_rek(a, tb, c):
+    if a == 0 :
+        return tb[0] * c
+    return horner_rek(a-1,tb , c ) * c + tb[a]
 def main(args):
 	tb = []
 	stopien = 3
@@ -19,7 +22,7 @@ def main(args):
 		tmp = int(input("Podaj współczynniki: "))
 		tb.append(tmp)
 		
-	print("Wynik: ", horner_it(stopien, tb, x))
+	print("Wynik: ", horner_rek(stopien, tb, x))
 	return 0
 
 if __name__ == '__main__':
