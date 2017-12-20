@@ -1,4 +1,5 @@
 
+
 #include <iostream>
 using namespace std;
 
@@ -17,37 +18,34 @@ void drukuj(int t[], int n )
     }
 }
 
-void zamien(int &a, int &b) {
-    tmp = a ;
+void zamien(int &a, int &b) 
+{
+    int tmp = a ;
     a = b ;
     b = a ;
 } 
 
-void sort_wyb(int t[], int n)
+void sort_babel(int t[], int n ) 
 {
-
-    int k ;
-    
-    for ( int i = 0 ; i < n; i++ )
-    
+    for (i int = 0 ; i < n ; i++ )
     {
-        
-    k = i;
-    
-    for (int j = i + 1 ;  j < n; j ++ ) {
-        if (t[j] < t[k])
-            k = j ;
-        }
-        zamien(t[i], t[k]); 
-    }
-}
+        for(int j = i + 1 ; j < n - i ; j++)
+            { 
+                if (t[j-1] > t[j])
+                zamien(t[j-1], t[j]);
+            }
+     }   
+}            
+             
 int main(int argc, char **argv)
 {
 	
     const int ile = 10 ;
     int tab[ile];
     wypelnij(tab, ile , 20);
-    drukuj(tab, ile);
+    drukuj(tab, ile); 
+    sort_babel(tab, ile)
+    drukuj(tab, ile)
     
     
 	return 0;
