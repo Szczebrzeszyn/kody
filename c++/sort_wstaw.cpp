@@ -29,7 +29,6 @@ void drukuj(int t[], int n)
 
 void sort_wstaw(int tab[], int n)
 {
-    // insert sort
     cout << "Sortowanie przez wstawianie" << endl;
 	int i, k, el;
     for (i = 1; i < n; i++)

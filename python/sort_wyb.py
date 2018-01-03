@@ -23,7 +23,7 @@ def losuj(liczby, ileliczb, maksliczb):
 
 def sort_wyb(tab):
     # selection sort
-    print(" ------------- Sortowanie przez wybieranie ---------------")
+    print("  Sortowanie przez wybieranie ")
     for i in range(len(tab)):
         k = i
         for j in range(i + 1, len(tab)):
