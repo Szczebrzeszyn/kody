@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# TOBEORNOTTOBETHATISTHEQUESTIONAND
 
 
 def szyfruj(tekst, klucz):
@@ -9,9 +10,15 @@ def szyfruj(tekst, klucz):
     if reszta:
         tekst += (klucz - reszta) * "."
 
+<<<<<<< HEAD
     for i in range(klucz): # 0-9
         # print("Wydrukowane i: ", i)
         for j in range(int(len(tekst) / klucz)): # 0-3
+=======
+    for i in range(klucz):  # 0-9
+        # print("Wydrukowane i: ", i)
+        for j in range(int(len(tekst) / klucz)):  # 0-3
+>>>>>>> 101adda196900f7be6bfceee05ddaf258a63973d
             # print("j: ", j)
             szyfrogram += tekst[i + j * klucz]
     return szyfrogram
@@ -19,10 +26,19 @@ def szyfruj(tekst, klucz):
 
 def deszyfruj(szyfrogram, klucz):
     tekst = ""
+<<<<<<< HEAD
     for i in range(int(len(szyfrogram) / klucz)): # 0-3
         for j in range(klucz): # 0-9
             tekst += szyfrogram[i + (j * int(len(szyfrogram) / klucz))]
             tekst = tekst.replace(".", "")
+=======
+    for i in range(int(len(szyfrogram) / klucz)):  # 0-3
+        for j in range(klucz):  # 0-9
+            # print(j)
+            # print("i=", i, " + ", "klucz=", int(len(szyfrogram) / klucz), " * ", "j=", j, " rowna sie: ", i + (j * int(len(szyfrogram) / klucz)) )
+            tekst += szyfrogram[i + (j * int(len(szyfrogram) / klucz))]
+            # tekst = tekst.replace(".", "")
+>>>>>>> 101adda196900f7be6bfceee05ddaf258a63973d
 
     return tekst
 
